@@ -105,8 +105,12 @@
     //  .on("tick", tick)
       //.start();
 
-  d3.json("data.json", function(error, graph) {
-      //  if (error) throw error;
+      d3.json("graph.json", function(error, json) {
+        //if (error) throw error;
+        if (error) return console.warn(error);
+        				data = json;
+        				console.log (data? data.length : 'json_data is null or undefined');
+                
 
     force
       .nodes(json.nodes)
