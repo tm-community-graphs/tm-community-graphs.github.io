@@ -101,18 +101,18 @@
       //.links(links)
       .size([width, height])
       .linkDistance(70)
-      .charge(-300)
-    //  .on("tick", tick)
+      .charge(-300);
+      //.on("tick", tick)
       //.start();
 
-      d3.json("data.json", function(error, json) {
-        //if (error) throw error;
-        if (error) return console.warn(error);
-        				data = json;
-        				console.log (data? data.length : 'json_data is null or undefined');
+  d3.json("data.json", function(error, json) {
+      //if (error) throw error;
+      if (error) return console.warn(error);
+      data = json;
+      console.log (data? data.length : 'json_data is null or undefined');
 
 
-    force
+  force
       .nodes(json.nodes)
       .links(json.links)
       .start();
