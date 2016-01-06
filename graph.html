@@ -92,13 +92,15 @@
 
       var node = svg.selectAll(".node")
           .data(graph.nodes)
+          .enter().append("g")
           .attr("class", "node")
           .on("mouseover", mouseover)
           .on("mouseout", mouseout)
-          .enter().append("circle")
-          .attr("r", 12)
-          .style("fill", function(d) { return color(d.group); })
           .call(force.drag);
+
+      node.append("circle")// .enter().append("circle")
+          .attr("r", 12)
+          .style("fill", function(d) { return color(d.group); });
 
       node.append("text")
           .attr("x", 12)
