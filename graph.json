@@ -2,11 +2,19 @@
   "nodes":[
     {"name":"Myriel","group":1},
     {"name":"Marguerite","group":2},
-    {"name":"Malakas","group":5}
+    {"name":"Maria","group":5},
+    {"name":"Monica","group":5},
+    {"name":"Marianne","group":1},
+    {"name":"Molly","group":2},
+    {"name":"Malakas","group":1}
   ],
   "links":[
     {"source":1,"target":2,"value":1},
-    {"source":2,"target":0,"value":1},
-    {"source":0,"target":1,"value":1}
+    {"source":2,"target":0,"value":2},
+    {"source":0,"target":1,"value":3},
+    {"source":3,"target":1,"value":1},
+    {"source":4,"target":3,"value":1},
+    {"source":5,"target":1,"value":1},
+    {"source":6,"target":2,"value":1}
   ]
 }
