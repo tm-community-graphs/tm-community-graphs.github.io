@@ -94,8 +94,8 @@
           .data(graph.nodes)
           .enter().append("g")
           .attr("class", "node")
-        //  .on("mouseover", mouseover)
-          //.on("mouseout", mouseout)
+          .on("mouseover", mouseover)
+          .on("mouseout", mouseout)
           .call(force.drag);
 
       node.append("circle")// .enter().append("circle")
@@ -113,9 +113,9 @@
                 + "S" + d[1].x + "," + d[1].y
                 + " " + d[2].x + "," + d[2].y;
             });
-
-      node.attr("transform", function(d) {
-            return "translate(" + d.x + "," + d.y + ")";
+            node.attr("transform", function(d) {
+              return "translate(" + d.x + "," + d.y + ")";
+            });
       });
 
       function mouseover() {
@@ -129,7 +129,6 @@
             .duration(750)
             .attr("r", 12);
       }
-    });
   });
 
   </script>
@@ -141,7 +140,7 @@
 
 	<footer class="footer">
       <div class="container">
-        <p class="text-muted">Kat 2015</p>
+        <p class="text-muted">Kat</p>
       </div>
   </footer>
 
